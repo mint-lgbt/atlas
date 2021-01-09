@@ -1,0 +1,2 @@
+class Fanfic < ApplicationRecord
+end
