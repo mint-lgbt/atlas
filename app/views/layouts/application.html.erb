@@ -19,17 +19,18 @@
         </a>
         <div class="d-flex justify-content-end">
           <a href="/users/sign_in" class="btn btn-outline-primary">Sign in</a>
-          <p> - </p>
           <a href="/users/sign_up" class="btn btn-dark">Sign up</a>
         </div>
       </div>
     </nav>
     <div id="alerts">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <p class="notice alert alert-warning" role="alert"><%= notice %></p>
+      <p class="alert alert-danger" role="alert"><%= alert %></p>
     </div>
-    <div class="main">
-      <%= yield %>
+    <div class="card">
+      <div class="card-body">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
