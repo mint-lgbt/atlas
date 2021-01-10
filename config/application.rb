@@ -18,5 +18,15 @@ module Atlas
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    ActionMailer::Base.smtp_settings = {
+      :user_name => 'apikey',
+      :password => ENV['SENDGRID_API_KEY'],
+      :domain => ENV['EMAIL_DOMAIN'],
+      :address => 'smtp.sendgrid.net',
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+    }
   end
 end
