@@ -13,6 +13,8 @@
 ActiveRecord::Schema.define(version: 2021_01_09_184919) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "btree_gist"
+  enable_extension "pg_trgm"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
